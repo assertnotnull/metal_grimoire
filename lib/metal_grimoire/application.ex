@@ -17,9 +17,10 @@ defmodule MetalGrimoire.Application do
       # Start Finch
       {Finch, name: MetalGrimoire.Finch},
       # Start the Endpoint (http/https)
-      MetalGrimoireWeb.Endpoint
+      MetalGrimoireWeb.Endpoint,
       # Start a worker by calling: MetalGrimoire.Worker.start_link(arg)
       # {MetalGrimoire.Worker, arg}
+      {Finch, name: BandScraperProcess}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
